@@ -25,7 +25,7 @@ var skype = peer();
 skype.use(video('#video'));
 ```
 
-  use it with **[signal](http://github.com/bredele/signal)** and **[channel](http://github.com/bredele/channel)**to create a video application like skype (video + chat) in a couple of lines:
+  use it with **[signal](http://github.com/bredele/signal)** and **[channel](http://github.com/bredele/channel)** to create a video application like skype (video + chat) in a couple of lines:
 
 ```js
 var skype = peer();
