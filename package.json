@@ -1,6 +1,6 @@
 {
   "name": "video",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "peer plugin to attach a video stream to a peer connection",
   "main": "index.js",
   "directories": {
