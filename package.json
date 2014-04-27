@@ -1,0 +1,31 @@
+{
+  "name": "video",
+  "version": "0.0.0",
+  "description": "peer plugin to attach a video stream to a peer connection",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bredele/video.git"
+  },
+  "keywords": [
+    "video",
+    "webrtc",
+    "peer"
+  ],
+  "author": "Olivier Wietrich <olivier.wietrich@gmail.com> (http://github.com/bredele)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bredele/video/issues"
+  },
+  "homepage": "https://github.com/bredele/video",
+  "devDependencies": {
+    "express": "^4.1.0",
+    "socket.io": "^0.9.16"
+  }
+}

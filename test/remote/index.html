@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>signal</title>
+</head>
+<body>
+	<video class="skype" muted></video>
+	<video class="remote" autoplay muted></video>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="/app/build.js"></script>
+	<script>
+	  var peer = require('peer');
+	  var channel = require('channel');
+	  var signal = require('signal');
+	  var video = require('video');
+
+	  var foo = peer();
+
+
+	  foo.on('remote stream', function(stream) {
+	  	document.querySelector('.remote').src = window.URL.createObjectURL(stream);
+	  });
+
+	  foo.use(video('.skype'));
+	  foo.use(signal('room'));
+	</script>
+</body>
+</html>
