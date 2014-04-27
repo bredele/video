@@ -26,6 +26,7 @@ module.exports = function(node, options) {
     if(data.video) video.set(data);
 
     video.on('stream', function(data, stream) {
+      peer.emit('stream');
       peer.queue('_stream', stream);
     });
 

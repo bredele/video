@@ -17,13 +17,16 @@
 
 	  var foo = peer();
 
-
 	  foo.on('remote stream', function(stream) {
 	  	document.querySelector('.remote').src = window.URL.createObjectURL(stream);
 	  });
 
+	  // to preserve the order: create, add stream and then offer/answer
+	  foo.on('stream', function() {
+	  	foo.use(signal('room'));
+	  });
+
 	  foo.use(video('.skype'));
-	  foo.use(signal('room'));
 	</script>
 </body>
 </html>
