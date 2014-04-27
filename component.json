@@ -4,11 +4,17 @@
   "description": "peer plugin to attach a video stream to a peer connection.",
   "version": "0.0.0",
   "keywords": [],
-  "dependencies": {},
+  "dependencies": {
+    "bredele/media": "~0.1.5",
+    "bredele/attach": "~0.0.3",
+    "bredele/wedge": "~0.1.0",
+    "bredele/connect": "~0.0.2"
+  },
   "development": {
     "bredele/peer": "*",
     "bredele/channel": "*",
-    "bredele/signal" : "*"
+    "bredele/signal": "*",
+    "bredele/connect": "*"
   },
   "license": "MIT",
   "main": "index.js",

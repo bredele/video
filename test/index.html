@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>video</title>
+</head>
+<body>
+	<video class="skype" muted></video>
+	<button onclick="call()">skype</button>
+	<video class="remote" autoplay></video>
+	<script src="../build/build.js"></script>
+	<script>
+	  var peer = require('peer');
+	  var video = require('video');
+	  var connect = require('connect');
+	  
+	  var remote = peer();
+	  remote.on('remote stream', function(stream) {
+	  	console.log('remoteeee');
+	  	document.querySelector('.remote').src = window.URL.createObjectURL(stream);
+	  });
+
+	  var skype = peer();
+
+	  skype.on('create', function() {
+	  	console.log('create');
+	  });
+
+	  skype.on('local stream', function() {
+	  	console.log('add stream');
+	  });
+
+	  skype.on('offer', function() {
+	  	console.log('offer');
+	  });
+
+
+	  skype.use(video('.skype'));
+	  skype.use(connect(remote, false));
+
+	  function call() {
+	  	skype.offer();
+	  }
+	</script>
+</body>
+</html>
