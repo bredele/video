@@ -14,6 +14,7 @@
 	  var channel = require('channel');
 	  var signal = require('signal');
 	  var video = require('video');
+	  var channel = require('channel');
 
 	  var foo = peer();
 
@@ -26,6 +27,11 @@
 	  	foo.use(signal('room'));
 	  });
 
+	  foo.on('message', function(data) {
+	  	console.log(data);
+	  });
+
+	  foo.use(channel('skype'));
 	  foo.use(video('.skype'));
 	</script>
 </body>
