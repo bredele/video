@@ -2,7 +2,7 @@
   "name": "video",
   "repo": "bredele/video",
   "description": "peer plugin to attach a video stream to a peer connection.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "keywords": [],
   "dependencies": {
     "bredele/media": "~0.1.5",
