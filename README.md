@@ -21,7 +21,7 @@ var video = require('video');
 
 var skype = peer();
 
-// connect to room foo
+// attach video
 skype.use(video('#video'));
 ```
 
