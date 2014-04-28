@@ -8,7 +8,7 @@ var resolve = require('path').resolve;
 
 app.use(express.static(resolve('.')));
 app.use('/app', express.static(resolve('../..', 'build')));
-server.listen(3000);
+server.listen(3001);
 
 
 

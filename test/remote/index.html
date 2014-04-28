@@ -19,6 +19,8 @@
 	  var foo = peer();
 
 	  foo.on('remote stream', function(stream) {
+	  	console.log('remote stream');
+	  	console.log(document.querySelector('.remote'));
 	  	document.querySelector('.remote').src = window.URL.createObjectURL(stream);
 	  });
 
@@ -31,7 +33,7 @@
 	  	console.log(data);
 	  });
 
-	  foo.use(channel('skype'));
+	  //foo.use(channel('skype'));
 	  foo.use(video('.skype'));
 	</script>
 </body>
