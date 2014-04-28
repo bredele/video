@@ -13,7 +13,7 @@ with [component](http://github.com/component/component):
 
 ## Usage
 
-  video is a one liner to attach a video stream a peer connection. 
+  video is a one liner to attach a video stream to a peer connection. 
 
 ```js
 var peer = require('peer');
