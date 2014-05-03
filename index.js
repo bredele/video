@@ -19,7 +19,7 @@ module.exports = function(node, options) {
   return function(peer) {
     var data = wedge(peer.data, 'video');
     var video = media({
-      video:true
+      video: true
     });
 
     // video should not be undefined

@@ -6,33 +6,40 @@
 </head>
 <body>
 	<video class="skype" muted></video>
-	<video class="remote" autoplay muted></video>
+	<video class="remote" muted></video>
 	<script src="/socket.io/socket.io.js"></script>
 	<script src="/app/build.js"></script>
 	<script>
 	  var peer = require('peer');
-	  var channel = require('channel');
 	  var signal = require('signal');
 	  var video = require('video');
 	  var channel = require('channel');
+	  var opus = require('opus');
 
-	  var foo = peer();
+	  var foo = peer({'iceServers': [{
+	  	'url': 'stun:stun.l.google.com:19302'
+	  }, {
+	  	'url': 'turn:23.236.53.1:3478?transport=udp',
+	  	'username': '1399099187:41784574',
+	  	'credential': 'ykfdzaXSf4h8ChTinmcSo/1Elzk='
+	  }]});
 
 	  foo.on('remote stream', function(stream) {
 	  	console.log('remote stream');
-	  	console.log(document.querySelector('.remote'));
-	  	document.querySelector('.remote').src = window.URL.createObjectURL(stream);
+	  	var video = document.querySelector('.remote');
+
+	  	video.src = window.URL.createObjectURL(stream);
+	  	video.play();
 	  });
+
+	  
 
 	  // to preserve the order: create, add stream and then offer/answer
 	  foo.on('stream', function() {
 	  	foo.use(signal('room'));
 	  });
 
-	  foo.on('message', function(data) {
-	  	console.log(data);
-	  });
-
+	  foo.codec(opus);
 	  //foo.use(channel('skype'));
 	  foo.use(video('.skype'));
 	</script>
