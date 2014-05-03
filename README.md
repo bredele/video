@@ -1,7 +1,7 @@
 video
 =====
 
-**[peer](http://github.com/bredele/peer)**  plugin to attach a video stream to a peer connection
+**[peer](http://github.com/bredele/peer)**  plugin to attach a video **[media](http://github.com/bredele/media)** stream to a peer connection
 
 
 ## Installation
@@ -25,7 +25,9 @@ var skype = peer();
 skype.use(video('#video'));
 ```
 
-  use it with **[signal](http://github.com/bredele/signal)** and **[channel](http://github.com/bredele/channel)** to create a video application like skype (video + chat) in a couple of lines:
+> video is based on [media](http://github.com/bredele/media) and [attach](http://github.com/bredele/attach).
+
+  Use video with **[signal](http://github.com/bredele/signal)** and **[channel](http://github.com/bredele/channel)** to create a video application like skype (video + chat) in a couple of lines:
 
 ```js
 var skype = peer();
