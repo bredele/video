@@ -10,19 +10,6 @@ var wedge = require('wedge');
 
 
 /**
- * Default video constraints.
- * @type {Object}
- */
-
-var constraints = {
-  video: {
-    mandatory: {},
-    optional: []
-  }
-};
-
-
-/**
  * Get a video stream from an HTML node
  * and attach the stream to a peer connection.
  * 
@@ -39,11 +26,10 @@ module.exports = function(node, options) {
 
   return function(peer) {
     var data = wedge(peer.data, 'video');
-    var video = media(constraints);
+    var video = media();
 
     // we don't validate video constraints
     if(data.video) video.set(data);
-
     video.on('stream', function(data, stream) {
       peer.emit('stream');
       peer.queue('_stream', stream);

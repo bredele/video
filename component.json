@@ -5,17 +5,16 @@
   "version": "0.1.0",
   "keywords": [],
   "dependencies": {
-    "bredele/media": "~0.1.5",
-    "bredele/attach": "~0.0.3",
-    "bredele/wedge": "~0.1.0",
-    "bredele/connect": "~0.0.2"
+    "bredele/media": "*",
+    "bredele/attach": "*",
+    "bredele/wedge": "*"
   },
   "development": {
     "bredele/peer": "*",
     "bredele/channel": "*",
     "bredele/signal": "*",
     "bredele/connect": "*",
-    "bredele/opus": "~0.1.0"
+    "bredele/opus": "*"
   },
   "license": "MIT",
   "main": "index.js",

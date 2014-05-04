@@ -40,6 +40,9 @@ skype.use(signal('foo'));
 
   see [example](https://github.com/bredele/video/blob/master/test/remote).
 
+<!-- ## Constraints
+
+video is based on [media](http://github.com/bredele/media) and [attach](http://github.com/bredele/attach) and use peer data to update the media constraints  -->
 
 ## License
 
