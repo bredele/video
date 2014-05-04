@@ -15,8 +15,10 @@ var wedge = require('wedge');
  */
 
 var constraints = {
-  "mandatory": {},
-  "optional": []
+  video: {
+    mandatory: {},
+    optional: []
+  }
 };
 
 
